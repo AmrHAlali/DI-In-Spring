@@ -1,9 +1,19 @@
 package com.amr;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
 import java.beans.ConstructorProperties;
 
+@Component
 public class Alien {
+    @Value("21")
     private int age;
+    @Autowired() // this is field injection
+    @Qualifier("desktop") // -> to choose between more than one component class
     private Computer comp;
 
     public Alien() {
@@ -18,6 +28,7 @@ public class Alien {
         this.age = age;
     }
 
+//    @Autowired // setter injection
     public Computer getComputer() {
         return comp;
     }
