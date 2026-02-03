@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="-->
+<!--        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
 
-    <bean id="alien" class="com.amr.Alien" autowire="byName">
-        <property name="age" value="21"/>
+<!--    <bean id="alien" class="com.amr.Alien" autowire="byName">-->
+<!--        <property name="age" value="21"/>-->
 
-        <property name="computer">
-            <bean class="com.amr.Laptop"/>
-        </property>
-    </bean>
+<!--        <property name="computer">-->
+<!--            <bean class="com.amr.Laptop"/>-->
+<!--        </property>-->
+<!--    </bean>-->
 
-    <bean id="computer1" class="com.amr.Desktop" lazy-init="true"/>
-</beans>
+<!--    <bean id="computer1" class="com.amr.Desktop" lazy-init="true"/>-->
+<!--</beans>-->
