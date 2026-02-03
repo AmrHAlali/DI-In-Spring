@@ -1,11 +1,12 @@
 package com.amr;
 
-public class Laptop {
+public class Laptop implements Computer {
     public Laptop() {
-        System.out.println("Laptop!");
+        System.out.println("Laptop created");
     }
 
+    @Override
     public void compile() {
-        System.out.println("Compiling");
+        System.out.println("Compiling using laptop");
     }
 }

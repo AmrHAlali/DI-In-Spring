@@ -4,22 +4,13 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--    <bean id="alien" class="com.amr.Alien" scope="prototype">-->
-    <!--    </bean>-->
+    <bean id="alien" class="com.amr.Alien" autowire="byName">
+        <property name="age" value="21"/>
 
-    <bean id="alien" class="com.amr.Alien" scope="prototype">
-<!--        <property name="age" value="21"></property> this line will run the method -> setAge -->
-
-<!--        <constructor-arg type="int" value="21" /> this lines will fill the value with a parameter in the parametrized constructor-->
-<!--        <constructor-arg type="com.amr.Laptop" ref="laptop"/>-->
-
-<!--        <constructor-arg index="1" ref="laptop"/>-->
-<!--        <constructor-arg index="0" value="21" />-->
-        <constructor-arg name="age" value="21" />
-        <constructor-arg name="lap" ref="laptop"/>
-        <property name="lap" ref="laptop"/>
+        <property name="computer">
+            <bean class="com.amr.Laptop"/>
+        </property>
     </bean>
 
-    <bean id="laptop" class="com.amr.Laptop"/>
-
+    <bean id="computer1" class="com.amr.Desktop" lazy-init="true"/>
 </beans>

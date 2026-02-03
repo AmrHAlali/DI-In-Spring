@@ -4,16 +4,9 @@ import java.beans.ConstructorProperties;
 
 public class Alien {
     private int age;
-    private Laptop lap;
+    private Computer comp;
 
     public Alien() {
-        System.out.println("Object Created!");
-    }
-    @ConstructorProperties({"age", "lap"})
-    public Alien(int age, Laptop lap) {
-        System.out.println("Para Constructor Called");
-        this.age = age;
-        this.lap = lap;
     }
 
     public int getAge() {
@@ -25,16 +18,16 @@ public class Alien {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getComputer() {
+        return comp;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setComputer(Computer comp) {
+        this.comp = comp;
     }
 
     public void code() {
         System.out.println("Coding");
-        lap.compile();
+        comp.compile();
     }
 }
