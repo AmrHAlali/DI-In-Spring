@@ -1,11 +1,10 @@
-package com.amr;
+package com.amr.model;
 
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Component("comp1")
-@Scope("prototype")
+@Primary
 public class Desktop implements Computer {
     public Desktop() {
         System.out.println("Desktop creating");

@@ -1,4 +1,4 @@
-package com.amr;
+package com.amr.model;
 
 public interface Computer {
     void compile();
